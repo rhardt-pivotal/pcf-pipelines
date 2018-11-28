@@ -124,6 +124,7 @@ jobs:
       nat_ip_az3: {{nat_ip_az3}}
       OPSMAN_ALLOW_SSH_CIDR_RANGES: {{opsman_allow_ssh_cidr_ranges}}
       OPSMAN_ALLOW_HTTPS_CIDR_RANGES: {{opsman_allow_https_cidr_ranges}}
+      TF_LOG: {{tf_log}}
     ensure:
       put: terraform-state
       params:
