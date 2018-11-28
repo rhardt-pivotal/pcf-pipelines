@@ -47,7 +47,8 @@ read -r -d '' director_configuration <<EOF
     "secret_key": "$aws_secret_access_key",
     "signature_version": "4",
     "region": "$AWS_REGION"
-  }
+  },
+  "identififaction_tags_string": "$custom_tags"
 }
 EOF
 

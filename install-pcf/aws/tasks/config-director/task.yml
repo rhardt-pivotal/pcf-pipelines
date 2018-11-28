@@ -27,5 +27,6 @@ params:
   dynamic_services_subnet_reserved_ranges_z2:
   dynamic_services_subnet_reserved_ranges_z3:
   infra_subnet_reserved_ranges_z1:
+  custom_tags:
 run:
   path: pcf-pipelines/install-pcf/aws/tasks/config-director/task.sh
