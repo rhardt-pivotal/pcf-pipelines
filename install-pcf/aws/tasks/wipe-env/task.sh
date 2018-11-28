@@ -63,7 +63,7 @@ terraform destroy \
   -var "aws_az2=dontcare" \
   -var "aws_az3=dontcare" \
   -var "route53_zone_id=dontcare" \
-  -var "vpc_cidr=0.0.0.0/0" \
+  -var "vpc_cidr=0.0.0.0/16" \
   -var "public_subnet_cidr_az1=0.0.0.0/0" \
   -var "public_subnet_cidr_az2=0.0.0.0/0" \
   -var "public_subnet_cidr_az3=0.0.0.0/0" \
