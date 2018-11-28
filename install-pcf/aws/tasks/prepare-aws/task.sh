@@ -56,9 +56,6 @@ terraform plan \
   -var "dynamic_services_subnet_cidr_az2=${dynamic_services_subnet_cidr_az2}" \
   -var "dynamic_services_subnet_cidr_az3=${dynamic_services_subnet_cidr_az3}" \
   -var "infra_subnet_cidr_az1=${infra_subnet_cidr_az1}" \
-  -var "rds_subnet_cidr_az1=${rds_subnet_cidr_az1}" \
-  -var "rds_subnet_cidr_az2=${rds_subnet_cidr_az2}" \
-  -var "rds_subnet_cidr_az3=${rds_subnet_cidr_az3}" \
   -var "opsman_ip_az1=${opsman_ip_az1}" \
   -var "nat_ip_az1=${nat_ip_az1}" \
   -var "nat_ip_az2=${nat_ip_az2}" \

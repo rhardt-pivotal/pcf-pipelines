@@ -36,10 +36,6 @@ variable "nat_instance_type" {
     description = "Instance Type for NAT instances"
     default = "t2.medium"
 }
-variable "db_instance_type" {
-    description = "Instance Type for RDS instance"
-    default = "db.m3.large"
-}
 
 variable "vpc_cidr" {
     description = "CIDR for the whole VPC"
@@ -60,10 +56,6 @@ variable "ert_subnet_cidr_az1" {
     default = "10.0.16.0/20"
 }
 # RDS subnet
-variable "rds_subnet_cidr_az1" {
-    description = "CIDR for the RDS Subnet 1"
-    default = "10.0.3.0/24"
-}
 # Services subnet
 variable "services_subnet_cidr_az1" {
     description = "CIDR for the Services Subnet 1"
@@ -96,10 +88,6 @@ variable "ert_subnet_cidr_az2" {
     default = "10.0.32.0/20"
 }
 # RDS subnet
-variable "rds_subnet_cidr_az2" {
-    description = "CIDR for the RDS Subnet 2"
-    default = "10.0.4.0/24"
-}
 # Services subnet
 variable "services_subnet_cidr_az2" {
     description = "CIDR for the Services Subnet 2"
@@ -130,10 +118,6 @@ variable "ert_subnet_cidr_az3" {
     default = "10.0.48.0/20"
 }
 # RDS subnet
-variable "rds_subnet_cidr_az3" {
-    description = "CIDR for the RDS Subnet 3"
-    default = "10.0.5.0/24"
-}
 # Services subnet
 variable "services_subnet_cidr_az3" {
     description = "CIDR for the Services Subnet 3"

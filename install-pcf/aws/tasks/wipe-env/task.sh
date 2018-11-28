@@ -77,9 +77,6 @@ terraform destroy \
   -var "dynamic_services_subnet_cidr_az2=0.0.0.0/0" \
   -var "dynamic_services_subnet_cidr_az3=0.0.0.0/0" \
   -var "infra_subnet_cidr_az1=0.0.0.0/0" \
-  -var "rds_subnet_cidr_az1=0.0.0.0/0" \
-  -var "rds_subnet_cidr_az2=0.0.0.0/0" \
-  -var "rds_subnet_cidr_az3=0.0.0.0/0" \
   -var "opsman_ip_az1=dontcare" \
   -var "nat_ip_az1=dontcare" \
   -var "nat_ip_az2=dontcare" \
