@@ -58,7 +58,6 @@ resource "aws_security_group_rule" "allow_https" {
   RDS Security group
 */
 
-}
 
 /*
   PCF VMS Security group
