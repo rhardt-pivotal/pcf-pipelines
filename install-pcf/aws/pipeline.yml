@@ -193,7 +193,7 @@ jobs:
       resource: pivnet-elastic-runtime
       params:
         globs:
-        - "cf*.pivotal"
+        - "srt*.pivotal"
     - get: terraform-state
       trigger: true
       passed: [deploy-director]
@@ -227,8 +227,8 @@ jobs:
       trigger: true
       passed: [upload-ert]
 
-  - task: configure-ert
-    file: pcf-pipelines/tasks/configure-ert/task.yml
+  - task: configure-srt
+    file: pcf-pipelines/tasks/configure-srt/task.yml
     params:
       pcf_iaas: aws
       PCF_ERT_DOMAIN: {{pcf_ert_domain}}
