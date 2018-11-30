@@ -1,0 +1,8 @@
+{
+  "database" : {"instance_type": "m5.large", "spot_bid_price": 1},
+  "control" : {"instance_type": "r4.xlarge", "spot_bid_price": 1},
+  "compute" : {"instance_type": "r4.xlarge", "spot_bid_price": 1},
+  "backup_restore" : {"instance_type": "t2.micro", "spot_bid_price": 1},
+  "router" : {"instance_type": "t2.micro", "spot_bid_price": 1},
+  "mysql_monitor" : {"instance_type": "t2.micro", "spot_bid_price": 1}
+}
