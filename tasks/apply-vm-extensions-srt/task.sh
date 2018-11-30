@@ -2,7 +2,7 @@
 
 set -euo pipefail
 
-cd /pcf-pipelines/tasks/apply-vm-extensions-srt
+cd pcf-pipelines/tasks/apply-vm-extensions-srt
 
 pip install -r requirements.txt
 
