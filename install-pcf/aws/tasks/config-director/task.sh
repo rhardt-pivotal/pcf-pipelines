@@ -41,7 +41,7 @@ read -r -d '' director_configuration <<EOF
     "signature_version": "4",
     "region": "$AWS_REGION"
   },
-  "identififaction_tags_string": "$custom_tags"
+  "identification_tags_string": "$custom_tags"
 }
 EOF
 

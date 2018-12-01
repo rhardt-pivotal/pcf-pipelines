@@ -157,7 +157,10 @@ data "aws_iam_policy_document" "pcf_iam_rds_role_policy_document" {
                 "ec2:CreateVolume",
                 "ec2:AttachVolume",
                 "ec2:DeleteVolume",
-                "ec2:DetachVolume"
+                "ec2:DetachVolume",
+		"ec2:RequestSpotInstances",
+		"ec2:DescribeSpotInstanceRequests",
+		"ec2:CancelSpotInstanceRequests"
             ],
             resources = [
                 "*"
