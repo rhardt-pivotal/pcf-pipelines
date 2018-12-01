@@ -16,13 +16,16 @@ refresh_url=opsman_host+'/uaa/oauth/token'
 
 def associate_vm_ext(client, cf_guid, job, vm_ext):
     print 'associate: '+str(job)+' || '+str(vm_ext)
-    vmext = {"name": job['name']+'_ext', "cloud_properties": vm_ext}
-    resp = client.put(opsman_host+'/api/v0/staged/vm_extensions/'+job['name']+'_ext', verify=False, json=vmext)
+    vme_name = job['name'] + '_ext'
+    vmext = {"name": vme_name, "cloud_properties": vm_ext}
+    vme_name = job['name']+'_ext'
+    resp = client.put(opsman_host+'/api/v0/staged/vm_extensions/'+vme_name, verify=False, json=vmext)
     if resp.status_code != 200:
         print 'got non-200 status code adding the vm extension (%d).  Exiting' % resp.status_code
         exit(1)
     job_resource_config = client.get(opsman_host+'/api/v0/staged/products/'+cf_guid+'/jobs/'+job['guid']+'/resource_config', verify=False).json()
-    job_resource_config['additional_vm_extensions'].append(job['name']+'_ext')
+    if vme_name not in job_resource_config['additional_vm_extensions']:
+        job_resource_config['additional_vm_extensions'].append(vme_name)
     update_job_config_resp = client.put(opsman_host + '/api/v0/staged/products/' + cf_guid + '/jobs/' + job['guid'] + '/resource_config',
                verify=False, json=job_resource_config)
 
@@ -63,6 +66,12 @@ def update_vm_exts():
             cf_guid = prod['guid']
             break
 
+    try:
+        cf_guid
+    except NameError:
+        print 'No CF Deployment found.  Exiting'
+        exit(1)
+
     jobs_resp = client.get(opsman_host+'/api/v0/staged/products/'+cf_guid+'/jobs')
     jobs = jobs_resp.json()['jobs']
     print jobs
@@ -78,3 +87,4 @@ def update_vm_exts():
 
 if __name__ == "__main__":
     update_vm_exts()
+
